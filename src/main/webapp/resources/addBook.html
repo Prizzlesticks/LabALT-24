@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+<link rel="stylesheet" type="text/css" href="css/Main.css"/>
+<title>Book Addition Form</title>
+
+<script>
+
+</script>
+
+<script>
+function validateForm() {
+    var title = document.forms["form1"]["title"].value;
+    var author = document.forms["form1"]["author"].value;
+    var sales = document.forms["form1"]["sales"].value;
+    var imprint = document.forms["form1"]["imprint"].value;
+    var publisher = document.forms["form1"]["publisher"].value;
+    var yearPublished = document.forms["form1"]["yearPublished"].value;
+    var genre = document.forms["form1"]["genre"].value;
+    //var status = document.forms["form1"]["status"].value;
+   // var borrower = document.forms["form1"]["borrower"].value;
+   
+    
+    var valid = true;
+    var message = "";
+    var year = parseInt(yearPublished, 10);
+    var sold = parseInt(sales, 10)
+  
+    
+    if (title === "") {
+        message += "Title is a required field. \n";
+        
+        //return false;
+        valid = false;
+    }      
+    if (author === "") {
+    	message += "Author is a required field. \n";
+        
+        //return false;
+        valid = false;
+    }       
+    
+    if (sold === "") {
+    	message += "Sales is a required field. \n";
+        
+        //return false;
+        valid = false;
+        
+    } else if (sold < 1) {
+        	message += "Please enter the number of books sold. \n";
+            
+            //return false;
+            valid = false;
+    }
+    
+    if (imprint === "") {
+    	message += "Email is a required field. \n";
+        
+        //return false;
+        valid = false;
+            
+    }
+        
+    if (publisher === "") {
+    	message += "Publisher is a required field.\n";
+    		//return false;
+    		valid = false;
+
+	} 
+    
+    if (year === "") {
+    	message += "Year Published is a required field. \n";
+        
+        //return false;
+        valid = false;
+        
+    } else if (year < 0001 || year > 2017) {
+    	message += "Please enter the correct Year Published. \n";
+        
+        //return false;
+        valid = false;
+        
+    } if (genre === "") {
+    	message += "Genre is a required field. \n";
+        
+        //return false;
+        valid = false;
+    }
+    
+    
+    
+    if (message !== "") {
+    	alert(message);
+    }
+    document.forms["form1"]["sales"].value = sold;
+    document.forms["form1"]["yearPublished"].value = year;
+      return valid;
+} 
+    
+</script> 
+
+</head>
+<body>
+<h1>Please Fill Out the Form Below to <br>Register a New Book:</h1>
+
+<form name = "form1" action= "../add" onsubmit="return validateForm();" method="post">
+<p> Title: <br><input type="text" name="title">
+<br>Author: <br><input type="text" name="author">
+<br>Number Sold: <br><input type="text" name="sales">
+<br>Imprint: <br><input type="text" name="imprint">
+<br>Publisher: <br><input type="text"  name="publisher">
+<br>Year Published: <br><input type="text"  name="yearPublished">
+<br>Genre: <br><input type="text" name="genre">
+<!-- <br>Status: <br><input type="text" name="status"> -->
+<!-- <br>Borrower: <br><input type="text"  name="borrower"></p> -->
+<br><input type="submit" value= "Click to Submit!" >
+<br></p>
+</form> 
+
+</body>
+</html>

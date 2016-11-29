@@ -1,0 +1,26 @@
+@CHARSET "UTF-8";
+
+body{
+	background-color: black;
+	text-align: center;
+}
+h1 {
+  text-align: center;
+  color: gold;
+  border: 1px;
+  border-style:solid;
+  border-color: #1aff1a;  
+  width: 80%;
+  margin: auto;
+}
+
+h2{
+	text-align:center;
+	color: red;
+	font-size: 90%;
+}
+p{
+	color: #1aff1a;
+	font-family: "Comic Sans MS";
+	
+}
