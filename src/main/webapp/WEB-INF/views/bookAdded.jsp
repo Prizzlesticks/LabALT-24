@@ -6,6 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="resources/css/Main.css"/>
 	<title>Enrollment Request</title>
+	<script> DAO.addBook</script>
 </head>
 <body>
 <h1>

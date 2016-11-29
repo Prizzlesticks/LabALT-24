@@ -25,17 +25,17 @@ public class DAO {
 		factory = configuration.buildSessionFactory(serviceRegistry);
 	}
 
-//	public static int addProduct(Product p) {
-//		if (factory == null)
-//			setupFactory();
-//		Session hibernateSession = factory.openSession();
-//		hibernateSession.getTransaction().begin();
-//		// save this specific record
-//		int i = (Integer) hibernateSession.save(p);
-//		hibernateSession.getTransaction().commit();
-//		hibernateSession.close();
-//		return i;
-//	}
+	public static int addBook(Book b) {
+		if (factory == null)
+			setupFactory();
+		Session hibernateSession = factory.openSession();
+		hibernateSession.getTransaction().begin();
+		// save this specific record
+		int i = (Integer) hibernateSession.save(b);
+		hibernateSession.getTransaction().commit();
+		hibernateSession.close();
+		return i;
+	}
 
 	public static List<Book> getAllBooks() {
 		if (factory == null)

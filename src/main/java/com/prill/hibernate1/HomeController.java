@@ -63,6 +63,34 @@ public class HomeController {
 		model.addAttribute("Status", 0);
 		model.addAttribute("Borrower", 0);
 		
+		
+		
+		String Title = request.getParameter("title");
+		String Author = request.getParameter("author");
+		String Sales2 = request.getParameter("sales");
+		String Imprint = request.getParameter("imprint");
+		String Publisher = request.getParameter("publisher");
+		String YearPublished2 = request.getParameter("yearPublished");
+		String Genre = request.getParameter("genre");
+		int Status = 0;
+		int Borrower = 0;
+		
+		int Sales = Integer.parseInt(Sales2);
+		
+		int YearPublished = Integer.parseInt(YearPublished2);
+		
+		Book b = new Book();
+		b.setTitle(Title);
+		b.setAuthor(Author);
+		b.setSales(Sales);
+		b.setImprint(Imprint);
+		b.setPublisher(Publisher);
+		b.setYearPublished(YearPublished);
+		b.setGenre(Genre);
+		b.setStatus(Status);
+		b.setBorrower(Borrower);
+		
+		DAO.addBook(b);
 		return "bookAdded";
 	}
 }

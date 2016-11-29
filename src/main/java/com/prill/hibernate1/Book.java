@@ -12,6 +12,11 @@ public class Book {
 	private int status;
 	private int borrower;
 	
+	
+	//public Book(String Title, String Author, int Sales, String Imprint, String Publisher, int yearPublished, String genre, int status, int borrower) {
+	//	super();
+	//}
+
 	public Book() {
 		super();
 	}
@@ -57,6 +62,7 @@ public class Book {
 	}
 
 	public void setRank(int rank) {
+		
 		this.rank = rank;
 	}
 
