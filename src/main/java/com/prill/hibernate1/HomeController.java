@@ -5,6 +5,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -47,5 +49,20 @@ public class HomeController {
 		
 		return "list";
 	}
+	@RequestMapping(value = "/add", method = RequestMethod.POST)
+	public String enroll(Model model, 
+			HttpServletRequest request) {
 	
+		model.addAttribute("Title", request.getParameter("title"));
+		model.addAttribute("Author", request.getParameter("author"));
+		model.addAttribute("Sales", request.getParameter("sales"));
+		model.addAttribute("Imprint", request.getParameter("imprint"));
+		model.addAttribute("Publisher", request.getParameter("publisher"));
+		model.addAttribute("YearPublished", request.getParameter("yearPublished"));
+		model.addAttribute("Genre", request.getParameter("genre"));
+		model.addAttribute("Status", 0);
+		model.addAttribute("Borrower", 0);
+		
+		return "bookAdded";
+	}
 }
