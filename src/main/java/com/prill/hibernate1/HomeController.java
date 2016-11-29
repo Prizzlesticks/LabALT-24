@@ -93,4 +93,13 @@ public class HomeController {
 		DAO.addBook(b);
 		return "bookAdded";
 	}
+	@RequestMapping(value = "/Removed", method = RequestMethod.POST)
+	public String delete(Model model, 
+			HttpServletRequest request) {
+		String i = request.getParameter("rank");
+		int d = Integer.parseInt(i);
+		
+	DAO.deleteBook(d);
+	return "Removed";
+	}
 }

@@ -47,4 +47,13 @@ public class DAO {
 		hibernateSession.close();
 		return books;
 	}
+
+	public static void deleteBook(int i) {
+		Session hibernateSession = factory.openSession();
+		hibernateSession.getTransaction().begin();
+		hibernateSession.createQuery("delete from books where rank=" + i);
+		hibernateSession.getTransaction().commit();
+		hibernateSession.close();;
+	    
+	}
 }

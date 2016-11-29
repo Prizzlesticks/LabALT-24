@@ -11,7 +11,7 @@
 <title>Book List</title>
 </head>
 <body>
-<h1>Book List</h1>
+<h1>You've Removed that Book from the Database</h1>
 <table border="1">
 	<tr>
 		<th>Rank</th>
@@ -19,7 +19,7 @@
 		<th>Title</th>
 		<th>Publisher/Imprint</th>
 		<th>Sales</th>
-		<th>Remove Record</th>
+		<th>Remove this Book</th>
 	</tr>
 <c:forEach items="${bookList }" var="book">
 	<tr>
@@ -28,7 +28,8 @@
 		<td>${book.title }</td>
 		<td>${book.publisher }: ${book.imprint }</td>
 		<td>${book.sales }</td>
-		<td><center> <a Href = "delete?rank=${book.rank}"  onclick="return confirm('Are you sure you want to delete this item?');"> Delete</a></center></td>
+		<td><center> <a Href = "../delete"  onclick="return confirm('Are you sure you want to delete this item?');"> Delete</a></center></td>
+
 </tr>
 </c:forEach>
 </table>
