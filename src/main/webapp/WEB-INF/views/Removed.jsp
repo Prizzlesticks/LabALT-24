@@ -7,10 +7,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="refresh" content="7;url=http://localhost:8080/hibernate1/list" />
+<link rel="stylesheet" type="text/css" href="resources/css/Main.css"/>
+<meta http-equiv="refresh" content="6;url=http://localhost:8080/hibernate1/list" />
 <title>Book Removed</title>
 </head>
-<body>
+<body class="removed">
 <center>
 <br><br><br><br><br><br><br><br><br>
 <h1>You've Removed that Book from the Database</h1>

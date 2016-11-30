@@ -8,7 +8,7 @@
 	<title>Enrollment Request</title>
 	<script> DAO.addBook</script>
 </head>
-<body>
+<body class="bookadded">
 <h1>
 	Your Book Was Added
 </h1>

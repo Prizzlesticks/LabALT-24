@@ -7,13 +7,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<style> body { 
+background-image: url("https://fontanalib.files.wordpress.com/2016/01/random-bookshelf.jpg");
+color: Gold;
+
+ } </style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Book List</title>
 </head>
-<body>
+<body class="listcss" link = red>
 <center>
 <h1>Book List</h1>
-<table border="1">
+<table border="1" bordercolor = green>
 	<tr>
 		<th>Rank</th>
 		<th>Author</th>
