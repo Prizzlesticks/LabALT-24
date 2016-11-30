@@ -13,6 +13,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * Handles requests for the application home page.
@@ -93,13 +95,11 @@ public class HomeController {
 		DAO.addBook(b);
 		return "bookAdded";
 	}
-	@RequestMapping(value = "/Removed", method = RequestMethod.POST)
+	@RequestMapping(value = "/delete", method = RequestMethod.GET)
 	public String delete(Model model, 
-			HttpServletRequest request) {
-		String i = request.getParameter("rank");
-		int d = Integer.parseInt(i);
-		
-	DAO.deleteBook(d);
+			HttpServletRequest request, @RequestParam(value="rank") int rank) {
+		 
+	DAO.deleteBook(rank);
 	return "Removed";
 	}
 }

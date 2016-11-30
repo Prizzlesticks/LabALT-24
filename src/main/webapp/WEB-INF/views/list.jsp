@@ -11,6 +11,7 @@
 <title>Book List</title>
 </head>
 <body>
+<center>
 <h1>Book List</h1>
 <table border="1">
 	<tr>
@@ -29,8 +30,10 @@
 		<td>${book.publisher }: ${book.imprint }</td>
 		<td>${book.sales }</td>
 		<td><center> <a Href = "delete?rank=${book.rank}"  onclick="return confirm('Are you sure you want to delete this item?');"> Delete</a></center></td>
+		
 </tr>
 </c:forEach>
 </table>
+</center>
 </body>
 </html>
