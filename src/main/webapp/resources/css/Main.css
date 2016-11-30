@@ -17,11 +17,14 @@ h1 {
 h2{
 	text-align:center;
 	color: red;
-	font-size: 90%;
 }
 p{
 	color: #1aff1a;
 	font-family: "Comic Sans MS";
 	
+}
+body {
+	background-image: url("https://fontanalib.files.wordpress.com/2016/01/random-bookshelf.jpg");
+	color: Gold;
 }
 
